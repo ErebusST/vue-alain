@@ -1,4 +1,4 @@
-import { ILocalsProvider } from './ILocalsProvider';
+import {ILocalsProvider} from './ILocalsProvider';
 
 /**
  * 本地ts国际化语言提供者，未使用

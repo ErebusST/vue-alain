@@ -11,18 +11,12 @@ export interface RootState {
 }
 
 export default new Vuex.Store<RootState>({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  },
-  modules: {
-    app: appState,
-    reuseTab: reuseTabState,
-    user: userState,
-  },
+    state: {},
+    mutations: {},
+    actions: {},
+    modules: {
+        app: appState,
+        reuseTab: reuseTabState,
+        user: userState,
+    },
 });

@@ -7,11 +7,11 @@ import {
     Vue,
 } from 'vue-property-decorator';
 
-import { VueConstructor } from 'Vue';
+import {VueConstructor} from 'Vue';
 
-import { Observable, BehaviorSubject } from 'rxjs';
-import { of } from 'rxjs/observable/of';
-import { catchError  } from 'rxjs/operators';
+import {Observable, BehaviorSubject} from 'rxjs';
+import {of} from 'rxjs/observable/of';
+import {catchError} from 'rxjs/operators';
 
 class ModalService {
 
@@ -20,7 +20,7 @@ class ModalService {
      * @param component 对话框组件
      * @param props 对话框props
      */
-    public show(component: VueConstructor<Vue>| Promise<any>  , props?: any): Observable<any> {
+    public show(component: VueConstructor<Vue> | Promise<any>, props?: any): Observable<any> {
 
         const modalsubject$: BehaviorSubject<any> = new BehaviorSubject<any>({});
         const comp = component as VueConstructor<Vue>;
@@ -45,7 +45,7 @@ class ModalService {
      * @param component 对话框组件
      * @param props 对话框props
      */
-    public showAsync(component: Promise<any>,  props?: any): Observable<any> {
+    public showAsync(component: Promise<any>, props?: any): Observable<any> {
         const modalsubject$: BehaviorSubject<any> = new BehaviorSubject<any>({});
         component.then((comp: any) => {
             const modalInstance = new comp.default({
@@ -63,7 +63,7 @@ class ModalService {
 
     private handlesubject(modalsubject$: BehaviorSubject<any>): Observable<any> {
         return modalsubject$.asObservable()
-        .pipe(catchError((err: any) => of(err)));
+            .pipe(catchError((err: any) => of(err)));
     }
 }
 

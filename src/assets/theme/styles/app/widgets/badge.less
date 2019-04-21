@@ -24,6 +24,7 @@
     height: @layout-gutter;
     padding: 0;
     border-radius: 50%;
+
     > * {
       display: none;
     }
@@ -36,15 +37,10 @@
   background-color: @bg;
 }
 
-.for-each(@colors, {
-  .badge-@{adKey} {
-    .badge-variant(extract(@adItem, @color-basic-position));
-  }
-});
+.for-each(@colors, { .badge-@{adKey} {
+  .badge-variant(extract(@adItem, @color-basic-position));
+} });
 
-.for-each(@aliasColors, {
-    @aliasColor: ~`getColor("@{colors}", "@{adValue}", @{color-basic-position})`;
-    .badge-@{adKey} {
-        .badge-variant(color(@aliasColor))
-    }
-});
+.for-each(@aliasColors, { @aliasColor: ~`getColor("@{colors}", "@{adValue}", @{color-basic-position})`; .badge-@{adKey} {
+  .badge-variant(color(@aliasColor))
+} });

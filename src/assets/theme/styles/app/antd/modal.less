@@ -41,23 +41,27 @@
     display: flex;
     justify-content: space-between;
   }
+
   &-title {
     font-size: @font-size-lg;
     font-weight: 500;
     line-height: 22px;
     color: @heading-color;
+
     small {
       color: @muted-color;
       font-size: 12px;
       margin-left: @layout-gutter;
     }
   }
+
   &-spin {
     display: block;
     min-height: 150px;
     line-height: 150px;
     text-align: center;
   }
+
   &-footer {
     border-top: @border-width-base @border-style-base @border-color-split;
     padding: 10px 16px;
@@ -65,11 +69,13 @@
     border-radius: 0 0 @border-radius-base @border-radius-base;
     margin: 24px -24px -24px -24px;
   }
+
   &-include-tabs {
     nz-tabset {
       margin-top: -16px;
     }
   }
+
   &-body-nopadding {
     .ant-modal-body {
       padding: 0 !important;

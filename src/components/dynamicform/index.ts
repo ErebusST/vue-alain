@@ -1,4 +1,4 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import {Component, Prop, Vue} from 'vue-property-decorator';
 
 import DateRangeWidget from './widgets/DateRangeWidget.vue';
 import NumberWidget from './widgets/NumberWidget.vue';

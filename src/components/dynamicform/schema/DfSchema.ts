@@ -1,8 +1,8 @@
-import { DFUISchema } from './UiSchema';
+import {DFUISchema} from './UiSchema';
 
 export interface DFSchemaDefinition {
     [key: string]: DFSchema;
-  }
+}
 
 /**
  * JSON Schema Form 结构体
@@ -176,4 +176,4 @@ export interface DFSchema {
     //////////// 非标准/////////////
     /** **唯一非标准：** 指定UI配置信息，优先级高于 `sf` 组件 `ui` 属性值 */
     ui?: DFUISchema | string;
-  }
+}

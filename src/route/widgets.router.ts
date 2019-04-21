@@ -14,10 +14,10 @@ const router = {
         name: '/widgets/index',
         component: () => import(/* webpackChunkName: "widgets" */ '@/views/widgets/Index.vue'),
         meta: {
-          title: '组件主页',
+            title: '组件主页',
         },
-      },
+    },
     ],
-  };
+};
 
 export default router;

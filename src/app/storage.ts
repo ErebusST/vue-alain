@@ -8,13 +8,13 @@ import * as _ from 'lodash';
 
 // local storage 配置
 Vue.use(_.clone(Storage), {
-  namespace: 'vuealain_', // sorage 前缀
-  name: 'ls', // 注入vue中的别名，this.$ls
-  storage: 'local',
+    namespace: 'vuealain_', // sorage 前缀
+    name: 'ls', // 注入vue中的别名，this.$ls
+    storage: 'local',
 });
 
 Vue.use(_.clone(Storage), {
-  namespace: 'vuealain_ss_', // sorage 前缀
-  name: 'ss', // 注入vue中的别名，this.$ss
-  storage: 'session',
+    namespace: 'vuealain_ss_', // storage 前缀
+    name: 'ss', // 注入vue中的别名，this.$ss
+    storage: 'session',
 });

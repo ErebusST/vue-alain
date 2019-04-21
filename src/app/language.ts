@@ -14,13 +14,13 @@ import localeService from '@/core/localeService';
 Vue.use(Vuei18n);
 
 const messages: any = {
-  zh_CN, // { title: '中文', key: 'zh_CN', values: zh_CN },
-  en_US: {}, // { title: 'English', key: 'en_US', values: en_US },
+    zh_CN, // { title: '中文', key: 'zh_CN', values: zh_CN },
+    en_US: {}, // { title: 'English', key: 'en_US', values: en_US },
 };
 // 配置多语言信息
 export const i18n = new Vuei18n({
-  locale: 'zh_CN',  // 语言标识
-  messages,
+    locale: 'zh_CN',  // 语言标识
+    messages,
 });
 
 

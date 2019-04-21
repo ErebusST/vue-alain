@@ -1,4 +1,4 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import {Component, Prop, Vue} from 'vue-property-decorator';
 
 /**
  * 动态表单组件注册类
@@ -6,7 +6,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
  */
 class WidgetRegistry {
 
-    private widgets: Map<string, any> = new Map<string,any>();
+    private widgets: Map<string, any> = new Map<string, any>();
 
     private defaultWidget: any;
 

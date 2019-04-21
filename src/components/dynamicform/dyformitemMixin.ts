@@ -1,4 +1,4 @@
-import { Observable, Subscription, BehaviorSubject } from 'rxjs';
+import {Observable, Subscription, BehaviorSubject} from 'rxjs';
 import {
     Component,
     Prop,
@@ -8,7 +8,7 @@ import {
     Watch,
 } from 'vue-property-decorator';
 
-import { DFSchema } from './schema/DfSchema';
+import {DFSchema} from './schema/DfSchema';
 import FormProperty from './domain/FormProperty';
 
 export interface IDyFormMixin {
@@ -24,7 +24,10 @@ export default class DyFormMixin extends Vue implements IDyFormMixin {
     /**
      * 表单属性
      */
-    @Prop({type: Object, default: () => {}})
+    @Prop({
+        type: Object, default: () => {
+        },
+    })
     public formitem!: FormProperty;
 
     /**

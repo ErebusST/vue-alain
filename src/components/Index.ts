@@ -6,7 +6,7 @@ import StandardTable from './standardtable/Index.vue';
 import BreadcrumbList from './breadcrumblist/Index.vue';
 
 export default {
-    install: ( Vue: any ) => {
+    install: (Vue: any) => {
         Vue.component('av-number-info', NumberInfo);
         Vue.component('av-page-header', PageHeader);
         Vue.component('av-footer-toolbar', FooterToolbar);

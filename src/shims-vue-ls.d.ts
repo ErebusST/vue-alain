@@ -1,5 +1,4 @@
-
 declare module 'vue-ls' {
-    const Storage : any;
+    const Storage: any;
     export default Storage;
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 declare module 'vue/types/vue' {
-  interface Vue {
-    $message: any;
-  }
+    interface Vue {
+        $message: any;
+    }
 }

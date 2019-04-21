@@ -82,7 +82,7 @@ const message = {
     'app.result.error.btn-text': 'Return to modify',
     'app.result.success.title': 'Submission Success',
     'app.result.success.description':
-        // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:max-line-length
         `The submission results page is used to feed back the results of a series of operational tasks. If it is a simple operation, use the Message global prompt feedback. This text area can show a simple supplementary explanation. If there is a similar requirement for displaying “documents”, the following gray area can present more complicated content.`,
     'app.result.success.operate-title': 'Project Name',
     'app.result.success.operate-id': 'Project ID：',
@@ -126,7 +126,7 @@ const message = {
     'app.setting.copy': 'Copy Setting',
     'app.setting.copyinfo': 'copy success，please replace defaultSettings in src/models/setting.js',
     'app.setting.production.hint':
-    'Setting panel shows in development environment only, please manually modify',
+        'Setting panel shows in development environment only, please manually modify',
 };
 
 export default {

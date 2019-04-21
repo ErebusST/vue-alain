@@ -16,7 +16,7 @@ import numeral from 'numeral';
 const yuan = (val: any) => `¥ ${numeral(val).format('0,0')}`;
 
 export default {
-    install: ( Vue: any ) => {
+    install: (Vue: any) => {
         Vue.component('av-mini-bar', MiniBar);
         Vue.component('av-bar', Bar);
         Vue.component('av-mini-area', MiniArea);
@@ -29,7 +29,7 @@ export default {
         Vue.component('av-water-wave', WaterWave);
         Vue.component('av-tag-cloud', TagCloud);
         Vue.component('av-gauge', Gauge);
-        Object.defineProperty( Vue.prototype, '$yuan', { value: yuan } );
-        Object.defineProperty( Vue.prototype, '$numeral', { value: numeral } );
+        Object.defineProperty(Vue.prototype, '$yuan', {value: yuan});
+        Object.defineProperty(Vue.prototype, '$numeral', {value: numeral});
     },
 };

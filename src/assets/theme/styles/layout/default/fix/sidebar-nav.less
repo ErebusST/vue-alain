@@ -6,10 +6,12 @@
   font-size: @alain-default-aside-nav-fs;
   margin: 0;
   padding: 0;
+
   &__item {
     position: relative;
     border-left: 3px solid transparent;
     transition: border-left-color 0.4s ease;
+
     > a {
       color: @alain-default-aside-nav-text-color;
       text-decoration: none;
@@ -18,32 +20,41 @@
       position: relative;
       display: block;
       user-select: none;
+
       i {
         min-width: @alain-default-aside-nav-icon-width;
         display: inline-block;
         margin-right: @layout-gutter;
         transition: font-size 0.15s @ease-out, margin 0.3s @ease-in-out;
       }
+
       > span {
         transition: opacity 0.3s @ease-in-out, width 0.3s @ease-in-out;
         opacity: 1;
       }
+
       &:hover {
         color: @alain-default-aside-nav-text-hover-color;
       }
     }
-  } // Selected
+  }
+
+  // Selected
   &__selected {
     border-left-color: @alain-default-aside-nav-selected-text-color;
     background-color: @alain-default-aside-nav-selected-bg;
+
     > a {
       color: @alain-default-aside-nav-selected-text-color;
     }
-  } // Open Submenu
+  }
+
+  // Open Submenu
   &__open {
     > .@{sidebar-nav-prefix-cls}__sub {
       display: block;
       animation: fadeIn 0.5s;
+
       &-title {
         &:after {
           transform: rotate(180deg) scale(0.75);
@@ -51,10 +62,12 @@
       }
     }
   }
+
   &__group-title {
     color: @alain-default-aside-nav-group-text-color;
     padding: @alain-default-aside-nav-padding-top-bottom @layout-gutter * 2;
   }
+
   &__sub {
     &-title {
       @fix-aside-icon-top: (
@@ -63,6 +76,7 @@
                 (@alain-default-aside-nav-padding-top-bottom * 2)
             ) - 18
         ) / 2;
+
       &:after {
         content: '\E61D';
         font-family: anticon !important;
@@ -81,16 +95,21 @@
         zoom: 1;
       }
     }
+
     display: none;
     overflow: hidden;
+
     .@{sidebar-nav-prefix-cls}__item {
       border-left: 0 !important;
     }
-  } // Badge
+  }
+
+  // Badge
   .badge {
     position: absolute;
     right: @layout-gutter * 2;
     @badge-height: @layout-gutter * 2;
+
     &:not(.badge-dot) {
       top: (@alain-default-aside-nav-item-height - @badge-height) / 2;
       height: @badge-height;
@@ -99,30 +118,38 @@
       padding: 0;
       overflow: hidden;
     }
+
     &-dot {
       top: (@alain-default-aside-nav-item-height - @layout-gutter) / 2;
     }
-  } // Dept
+  }
+
+  // Dept
   &__depth1 {
     .@{sidebar-nav-prefix-cls}__item > a {
       padding-left: (@layout-gutter * 3) + @alain-default-aside-nav-icon-width;
     }
   }
+
   &__depth2 {
     .@{sidebar-nav-prefix-cls}__item > a {
       padding-left: (@layout-gutter * 4) + @alain-default-aside-nav-icon-width;
     }
   }
+
   &__depth3 {
     .@{sidebar-nav-prefix-cls}__item > a {
       padding-left: (@layout-gutter * 5) + @alain-default-aside-nav-icon-width;
     }
   }
+
   &__depth4 {
     .@{sidebar-nav-prefix-cls}__item > a {
       padding-left: (@layout-gutter * 6) + @alain-default-aside-nav-icon-width;
     }
-  } // Floating
+  }
+
+  // Floating
   &__floating {
     position: absolute;
     z-index: @zindex + 7;
@@ -131,30 +158,38 @@
     background-color: @alain-default-aside-bg;
     border-radius: 4px;
     display: none;
+
     .@{sidebar-nav-prefix-cls}__item {
       a {
         padding-left: @layout-gutter * 2;
       }
     }
+
     &-show {
       display: block;
     }
+
     .@{sidebar-nav-prefix-cls}__sub {
       display: block;
     }
+
     .@{sidebar-nav-prefix-cls}__sub-title::after {
       display: none;
-    } // Dept
+    }
+
+    // Dept
     .@{sidebar-nav-prefix-cls}__depth2 {
       .@{sidebar-nav-prefix-cls}__item > a {
         padding-left: @layout-gutter * 3;
       }
     }
+
     .@{sidebar-nav-prefix-cls}__depth3 {
       .@{sidebar-nav-prefix-cls}__item > a {
         padding-left: @layout-gutter * 4;
       }
     }
+
     .@{sidebar-nav-prefix-cls}__depth4 {
       .@{sidebar-nav-prefix-cls}__item > a {
         padding-left: @layout-gutter * 5;
@@ -168,13 +203,16 @@
     .@{sidebar-nav-prefix-cls}:not(.@{sidebar-nav-prefix-cls}__sub) {
       .@{sidebar-nav-prefix-cls}__item {
         border: none;
+
         > a {
           text-align: center;
           padding: (@layout-gutter * 3) 0;
+
           i {
             margin-right: 0;
             font-size: @alain-default-aside-collapsed-nav-fs;
           }
+
           > span {
             max-width: 0;
             display: inline-block;
@@ -182,13 +220,16 @@
           }
         }
       }
+
       .@{sidebar-nav-prefix-cls}__group-title {
         display: none;
       }
     }
+
     .@{sidebar-nav-prefix-cls} {
       &__sub {
         display: none !important;
+
         &-title {
           &:after {
             display: none;

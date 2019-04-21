@@ -6,9 +6,9 @@ import * as _ from 'lodash';
 /**
  * 语言提供者
  */
-import { ILocalsProvider } from './locale/ILocalsProvider';
-import { JsonLocaleProvider } from './locale/JsonLocaleProvider';
-import { AntdLocaleProvider } from './locale/AntdLocaleProvider';
+import {ILocalsProvider} from './locale/ILocalsProvider';
+import {JsonLocaleProvider} from './locale/JsonLocaleProvider';
+import {AntdLocaleProvider} from './locale/AntdLocaleProvider';
 
 class LocaleService {
     // tslint:disable-next-line:variable-name
@@ -32,19 +32,19 @@ class LocaleService {
             if (!this.loadedLanguages.includes(lang)) {
                 const langs = this.getLocales(lang);
                 return Promise.all(langs)
-                        .then((msgs: any[]) => {
-                            const langMsg = {};
-                            msgs.map((item: any) => {
-                                if (item.data != null) {
-                                    _.assignIn(langMsg, item.data);
-                                } else {
-                                    _.assignIn(langMsg, item.default);
-                                }
-                            });
-                            i18n.setLocaleMessage(lang, langMsg);
-                            this.loadedLanguages.push(lang);
-                            return this.setI18nLanguage(lang);
+                    .then((msgs: any[]) => {
+                        const langMsg = {};
+                        msgs.map((item: any) => {
+                            if (item.data != null) {
+                                _.assignIn(langMsg, item.data);
+                            } else {
+                                _.assignIn(langMsg, item.default);
+                            }
                         });
+                        i18n.setLocaleMessage(lang, langMsg);
+                        this.loadedLanguages.push(lang);
+                        return this.setI18nLanguage(lang);
+                    });
             }
             return Promise.resolve(this.setI18nLanguage(lang));
         }
@@ -54,9 +54,9 @@ class LocaleService {
     private getLocales(lang: any) {
         const localeProviders: Array<Promise<any>> = [];
         this.providers.forEach((item: any) => {
-                const provider = new item() as ILocalsProvider;
-                localeProviders.push(provider.getMesage(lang));
-            });
+            const provider = new item() as ILocalsProvider;
+            localeProviders.push(provider.getMesage(lang));
+        });
         return localeProviders;
     }
 

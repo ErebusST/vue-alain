@@ -14,18 +14,17 @@ declare module 'ant-design-vue' {
 }*/
 
 declare module 'ant-design-vue/lib/LocaleProvider' {
-    const LocaleProvider : any;
+    const LocaleProvider: any;
     export default LocaleProvider;
 }
 
 
-
 declare module 'ant-design-vue/lib/locale-provider/zh_CN' {
-    const zhCN : any;
+    const zhCN: any;
     export default zhCN;
 }
 
 declare module 'ant-design-vue/lib/locale-provider/en_US' {
-    const enUS : any;
+    const enUS: any;
     export default enUS;
 }

@@ -1,4 +1,4 @@
-import { ILocalsProvider } from './ILocalsProvider';
+import {ILocalsProvider} from './ILocalsProvider';
 
 /**
  * antd 国际化相信提供者

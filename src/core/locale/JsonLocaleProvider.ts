@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ILocalsProvider } from './ILocalsProvider';
+import {ILocalsProvider} from './ILocalsProvider';
 
 /**
  * json 文件国际化信息提供者

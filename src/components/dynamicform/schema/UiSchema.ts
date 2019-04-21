@@ -1,4 +1,4 @@
-import { ErrorSchema } from './ErrorSchema';
+import {ErrorSchema} from './ErrorSchema';
 
 export interface DFGridSizeSchema {
     span?: number;
@@ -37,19 +37,19 @@ export interface DFRenderSchema {
 }
 
 export interface DFDataSchema {
-/**
- * 异步静态数据源
- * - `input` 可能根据不同部件的情况存在值，例如：`autocomplete` 表示当前键入的值
- * - 参数、返回值：可能根据不同部件需求而定，具体参阅相应小部件独立说明
- */
+    /**
+     * 异步静态数据源
+     * - `input` 可能根据不同部件的情况存在值，例如：`autocomplete` 表示当前键入的值
+     * - 参数、返回值：可能根据不同部件需求而定，具体参阅相应小部件独立说明
+     */
     asyncData?: (input?: any) => Promise<any[]>;
 }
 
 /** 指定如何渲染 `Schema` */
 export interface DFUISchemaItem
-extends DFRenderSchema,
-    DFDataSchema,
-    ErrorSchema {
+    extends DFRenderSchema,
+        DFDataSchema,
+        ErrorSchema {
     [key: string]: any;
 
     /** 是否开启调试模式，在数据变更、校验会打印出相信信息，不建议在生产环境中使用 */
@@ -68,5 +68,5 @@ extends DFRenderSchema,
  * - 当KEY为 `*` 时表示对所有子表单元素都有效
  */
 export interface DFUISchema {
-[key: string]: DFUISchemaItem;
+    [key: string]: DFUISchemaItem;
 }

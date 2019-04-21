@@ -14,10 +14,10 @@ const router = {
         name: '/passport/login',
         component: () => import(/* webpackChunkName: "widgets" */ '@/views/passport/login/login.vue'),
         meta: {
-          title: '登录',
+            title: '登录',
         },
-      },
+    },
     ],
-  };
+};
 
 export default router;

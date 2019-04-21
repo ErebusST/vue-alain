@@ -4,20 +4,25 @@
   &-search + .ad-st {
     margin-top: @layout-gutter * 2;
   }
+
   .optional {
     color: rgba(0, 0, 0, 0.45);
   }
+
   // 固定 label
   &-fixed {
     display: flex;
+
     nz-form-control,
     .ant-form-item-control-wrapper {
       flex: 1;
     }
   }
+
   &-array-container {
     nz-card {
       margin: 0 16px 0 0;
+
       .remove {
         display: none;
         position: absolute;
@@ -31,10 +36,12 @@
         background: rgba(0, 0, 0, 0.26);
         border-radius: 50%;
         cursor: pointer;
+
         i {
           color: #fff;
         }
       }
+
       &:hover {
         .remove {
           display: block;
@@ -42,11 +49,13 @@
       }
     }
   }
+
   sf-array {
     .add {
       margin-right: 16px;
     }
   }
+
   .checkbox-grid-list {
     width: 100%;
     display: block;
@@ -60,24 +69,29 @@
       display: block;
     }
   }
+
   // upload
   .ant-upload-select-picture-card i {
     font-size: 32px;
     color: #999;
   }
+
   .ant-upload.ant-upload-drag {
     height: 180px;
   }
+
   // transfer
   .ant-transfer {
     &-list {
       background: #fff;
+
       &-header {
         label {
           position: unset;
         }
       }
     }
+
     .ant-btn + .ant-btn {
       margin-left: 0;
     }

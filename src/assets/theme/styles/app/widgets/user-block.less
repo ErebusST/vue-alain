@@ -6,14 +6,17 @@
   display: block !important;
   width: @user-block-width;
   cursor: pointer;
+
   .user-block-dropdown {
     display: flex;
     align-items: center;
   }
+
   .info {
     color: @text-color;
     width: @user-block-width - @user-block-avatar-hw - @layout-gutter;
   }
+
   .avatar {
     margin-right: @layout-gutter;
   }
@@ -24,9 +27,11 @@
   .aside-collapsed {
     .user-block {
       width: @aside-collapsed-wd;
+
       .info {
         display: none;
       }
+
       .avatar {
         margin: 0 auto;
       }
